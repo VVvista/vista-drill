@@ -1,4 +1,4 @@
-package com.vista.leetcode.list.string;
+package com.vista.leetcode.string;
 
 /**
  * @author WenTingTing by 2020/4/1

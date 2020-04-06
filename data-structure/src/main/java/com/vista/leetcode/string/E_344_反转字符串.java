@@ -1,4 +1,4 @@
-package com.vista.leetcode.list.string;
+package com.vista.leetcode.string;
 
 /**
  * https://leetcode-cn.com/problems/reverse-string/

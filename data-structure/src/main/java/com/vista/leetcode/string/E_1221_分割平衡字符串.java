@@ -1,4 +1,4 @@
-package com.vista.leetcode.list.string;
+package com.vista.leetcode.string;
 
 /**
  * https://leetcode-cn.com/problems/split-a-string-in-balanced-strings/
