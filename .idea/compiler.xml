@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <option name="USE_RELEASE_OPTION" value="false" />
     <annotationProcessing>
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="java-base" />
         <module name="data-structure" />
+        <module name="design-mode" />
         <module name="design-pattern" />
+        <module name="java-base" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="8" />
+    <bytecodeTargetLevel target="8">
+      <module name="data-structure" target="1.6" />
+      <module name="design-mode" target="1.8" />
+      <module name="design-pattern" target="1.8" />
+      <module name="java-base" target="1.6" />
+      <module name="vista-drill" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
