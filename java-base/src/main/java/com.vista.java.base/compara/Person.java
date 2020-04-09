@@ -5,9 +5,11 @@ import java.util.Arrays;
 /**
  * @author WenTingTing by 2020/4/7
  */
-public class Person implements Comparable<Person> {
+public class Person implements Comparable<Person>, Cloneable {
     String name;
     int age;
+    Person1 person;
+
 
     public Person(String name, int age) {
         this.name = name;
@@ -25,6 +27,32 @@ public class Person implements Comparable<Person> {
                 "name='" + name + '\'' +
                 ", age=" + age +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+
+        Person person = (Person) o;
+
+        return age == person.age && (name != null ? name.equals(person.name) : person.name == null);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = name != null ? name.hashCode() : 0;
+        result = 31 * result + age;
+        return result;
+    }
+
+    @Override
+    protected Person clone() throws CloneNotSupportedException {
+        return (Person) super.clone();
     }
 
     public static void main(String[] a) {

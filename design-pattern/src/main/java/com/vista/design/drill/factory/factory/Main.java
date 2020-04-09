@@ -5,6 +5,8 @@ import com.vista.design.drill.factory.factory.factory.HeBeiGFFactory;
 import com.vista.design.drill.factory.factory.factory.ShanDongGFFactory;
 import com.vista.design.drill.factory.factory.factory.SiChuanGFFactory;
 
+import java.util.ArrayList;
+
 /**工厂设计模式
  * 此方式是在简单工厂设计模式的基础上进行改造的：
  * 1.定义一个用于创建对象的接口（例如此处：IGFFactory）
@@ -16,13 +18,21 @@ import com.vista.design.drill.factory.factory.factory.SiChuanGFFactory;
  *https://mp.weixin.qq.com/s/eGd-1gXcE_KY8mZBKd-S5g
  * @author WenTingTing by 2020/4/7
  */
-public class Main {
+public class Main  implements Cloneable{
     public static void main(String[] a) {
+
+
         BaseGF heiBei = new HeBeiGFFactory().createGF();
         heiBei.eat();
+
         BaseGF shanDong = new ShanDongGFFactory().createGF();
         shanDong.eat();
         BaseGF siChuan = new SiChuanGFFactory().createGF();
         siChuan.eat();
+    }
+
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
     }
 }
