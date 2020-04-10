@@ -32,7 +32,7 @@ public class Main {
 
         PingFangBuilder pingFangBuilder = new PingFangBuilder();
         director.makeProduct(pingFangBuilder);
-        System.out.println(pingFangBuilder.build());// Product(id=13, name=桌子, desc=办公桌)
+        System.out.println(pingFangBuilder.build()); // Product(id=13, name=桌子, desc=办公桌)
 
 
         PingFangBuilder pingFangSimpleBuilder = new PingFangBuilder();

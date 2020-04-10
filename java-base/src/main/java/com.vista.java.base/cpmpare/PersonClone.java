@@ -1,4 +1,4 @@
-package com.vista.java.base.compara;
+package com.vista.java.base.cpmpare;
 
 import org.junit.Test;
 
