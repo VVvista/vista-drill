@@ -1,11 +1,14 @@
 package com.vista.drill.tree;
 
 
-import java.util.*;
+import java.util.Comparator;
+import java.util.LinkedList;
+import java.util.Queue;
 
 /**
  * 二叉搜索树
  * 中序遍历时呈递增序列，结点元素必须具有可比性，元素不能为null
+ * https://juejin.im/post/5dfc735ee51d45582d3405de#heading-6
  *
  * @author WenTingTing by 2020/4/7
  */
@@ -135,7 +138,21 @@ public class BinarySearchTree<E> implements BinarySearchTreeInterface<E> {
             node.element = successor.element;
             node = successor;
         }
-        // 如果结点度为1或0
+        // 如果结点度为1或0，先理清思路然后再归类整理，最后书写代码（此处的实现逻辑比视频中简单）
+        Node<E> child = node.left != null ? node.left : node.right; // 隐藏 left==right==null,此时child=null，表明结点度为0
+        if (node.parent == null) {
+            root = child;
+        } else if (node == node.parent.left) {
+            if (child != null) {
+                child.parent = node.parent;
+            }
+            node.parent.left = child;
+        } else {
+            if (child != null) {
+                child.parent = node.parent;
+            }
+            node.parent.right = child;
+        }
 
     }
 

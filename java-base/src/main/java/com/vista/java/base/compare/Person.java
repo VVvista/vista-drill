@@ -1,4 +1,4 @@
-package com.vista.java.base.cpmpare;
+package com.vista.java.base.compare;
 
 import java.util.Arrays;
 
