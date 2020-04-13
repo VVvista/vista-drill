@@ -1,7 +1,5 @@
 package com.vista.drill.tree;
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
-
 /**
  * @author WenTingTing by 2020/4/7
  */

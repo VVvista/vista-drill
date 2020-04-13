@@ -38,8 +38,7 @@ public class Main {
         artistDecorator.dress();// 女士穿着 艺术家：引领时尚潮流
         final Person programmerDecorator = new ProgrammerDecorator(artistDecorator);
         programmerDecorator.dress();// 女士穿着  艺术家：引领时尚潮流  程序员：T恤-大裤衩-人字拖
-
-
+        
     }
 
 }
