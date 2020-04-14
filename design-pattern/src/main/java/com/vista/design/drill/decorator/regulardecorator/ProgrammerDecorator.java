@@ -23,4 +23,5 @@ public class ProgrammerDecorator extends Decorator {
     public void simple() {
         System.out.println("程序员：T恤-大裤衩-人字拖");
     }
+
 }
