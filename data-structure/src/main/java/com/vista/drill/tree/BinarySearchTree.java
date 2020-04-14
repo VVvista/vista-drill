@@ -2,8 +2,6 @@ package com.vista.drill.tree;
 
 
 import java.util.Comparator;
-import java.util.LinkedList;
-import java.util.Queue;
 
 /**
  * 二叉搜索树
@@ -36,6 +34,8 @@ public class BinarySearchTree<E> extends BinaryTree<E> {
         if (root == null) {
             root = new Node<E>(element, null);
             size++;
+            // 添加新结点后调整树的平衡
+            afterAdd(root);
             return;
         }
         // 如果根结点不为空
@@ -64,7 +64,21 @@ public class BinarySearchTree<E> extends BinaryTree<E> {
         } else {
             nodeParent.left = newNode;
         }
+        // 添加新结点后调整树的平衡
+        afterAdd(newNode);
         size++;
+    }
+
+    /**
+     * 调整树的平衡
+     * 新结点一定是叶子结点，所以添加完新结点之后再进行调整树的平衡
+     * 此方法主要是在AVl树和红黑树中重写调整平衡的逻辑
+     * 此类：二叉搜索树中无需调整树的平衡
+     *
+     * @param node 添加的新结点
+     */
+    public void afterAdd(Node<E> node) {
+
     }
 
     /**
@@ -104,7 +118,18 @@ public class BinarySearchTree<E> extends BinaryTree<E> {
             }
             node.parent.right = child;
         }
+        // 删除某个结点后，调整平衡
+        afterRemove(child);
+    }
 
+    /**
+     * 删除某个结点之后，对结点进行平衡调整
+     * 此方法是在AVL树或红黑树中重写实现逻辑
+     * 二叉搜索树种无需实现该逻辑
+     *
+     * @param node
+     */
+    public void afterRemove(Node<E> node) {
     }
 
     /**
