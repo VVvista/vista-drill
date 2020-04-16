@@ -17,4 +17,22 @@ public class Node<E> {
     public Boolean hasTwoChildren() {
         return this.left != null && this.right != null;
     }
+
+    /**
+     * 判断该结点是否为父结点的左子节点
+     *
+     * @return
+     */
+    public boolean isLeftChild() {
+        return parent != null && this == parent.left;
+    }
+
+    /**
+     * 判断该结点是否为父结点的右子节点
+     *
+     * @return
+     */
+    public boolean isRightChild() {
+        return parent != null && this == parent.right;
+    }
 }

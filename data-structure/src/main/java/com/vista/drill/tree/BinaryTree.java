@@ -5,6 +5,8 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
+ * 二叉树
+ *
  * @author WenTingTing by 2020/4/13
  */
 public class BinaryTree<E> {

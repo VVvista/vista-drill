@@ -3,7 +3,7 @@ package com.vista.drill.tree;
 import java.util.Comparator;
 
 /**
- * 平衡二叉树-AVL树
+ * AVL树-平衡二叉树
  * <p>
  * 特有概念：
  * 平衡因子：某结点的左右子树的高度差
@@ -20,7 +20,7 @@ import java.util.Comparator;
  *
  * @author WenTingTing by 2020/4/13
  */
-public class AVLTree<E> extends BinarySearchTree<E> {
+public class AVLTree<E> extends BBSTree<E> {
 
 
     public AVLTree(Comparator<E> comparator) {
@@ -139,13 +139,12 @@ public class AVLTree<E> extends BinarySearchTree<E> {
      *
      * @param grand
      */
+    @Override
     public void rotateRight(Node<E> grand) {
-        Node<E> parent = grand.left;
-        Node<E> child = parent.right;
-        // 交换左右子树
-        grand.left = child;
-        parent.right = grand;
-        afterRotate(grand, parent, child);
+        super.rotateRight(grand);
+        // 更新结点的高度
+        updateHeight(grand);
+        updateHeight(grand.left);// updateHeight(parent)
     }
 
     /**
@@ -162,33 +161,12 @@ public class AVLTree<E> extends BinarySearchTree<E> {
      *
      * @param grand
      */
+    @Override
     public void rotateLeft(Node<E> grand) {
-        Node<E> parent = grand.right;
-        Node<E> child = parent.left;
-        // 交换左右子树
-        grand.right = child;
-        parent.left = grand;
-        afterRotate(grand, parent, child);
-    }
-
-    public void afterRotate(Node<E> grand, Node<E> parent, Node<E> child) {
-        // 将parent赋值给grand父节点的左右子树
-        if (grand.parent == null) {
-            root = parent;
-        } else if (((AVLNode<E>) grand).isLeftChild()) {
-            grand.parent.left = parent;
-        } else {
-            grand.parent.right = parent;
-        }
-
-        // 赋值父节点
-        parent.parent = grand.parent;
-        grand.parent = parent;
-        if (child != null) child.parent = grand;
-
+        super.rotateLeft(grand);
         // 更新结点的高度
         updateHeight(grand);
-        updateHeight(parent);
+        updateHeight(grand.right);// updateHeight(parent)
     }
 
     /**
@@ -201,6 +179,7 @@ public class AVLTree<E> extends BinarySearchTree<E> {
      *
      * @param node
      */
+    @Override
     public void afterRemove(Node<E> node) {
         while ((node = node.parent) != null) {
             //判断结点是否平衡
@@ -265,23 +244,6 @@ public class AVLTree<E> extends BinarySearchTree<E> {
             return isLeftChild() ? left : right;
         }
 
-        /**
-         * 判断该结点是否为父结点的左子节点
-         *
-         * @return
-         */
-        public boolean isLeftChild() {
-            return parent != null && this == parent.left;
-        }
-
-        /**
-         * 判断该结点是否为父结点的右子节点
-         *
-         * @return
-         */
-        public boolean isRightChild() {
-            return parent != null && this == parent.right;
-        }
 
     }
 
