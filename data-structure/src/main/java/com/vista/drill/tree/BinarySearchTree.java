@@ -151,7 +151,7 @@ public class BinarySearchTree<E> extends BinaryTree<E> {
                 return node;
             }
         }
-        return node;
+        return null;
     }
 
     /**

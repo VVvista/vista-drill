@@ -1,5 +1,7 @@
 package com.vista.drill.tree;
 
+import lombok.NoArgsConstructor;
+
 import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.Queue;
