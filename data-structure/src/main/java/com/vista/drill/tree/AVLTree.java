@@ -144,7 +144,7 @@ public class AVLTree<E> extends BBSTree<E> {
         super.rotateRight(grand);
         // 更新结点的高度
         updateHeight(grand);
-        updateHeight(grand.left);// updateHeight(parent)
+        updateHeight(grand.parent);// updateHeight(parent)
     }
 
     /**
@@ -166,7 +166,7 @@ public class AVLTree<E> extends BBSTree<E> {
         super.rotateLeft(grand);
         // 更新结点的高度
         updateHeight(grand);
-        updateHeight(grand.right);// updateHeight(parent)
+        updateHeight(grand.parent);// updateHeight(parent)
     }
 
     /**

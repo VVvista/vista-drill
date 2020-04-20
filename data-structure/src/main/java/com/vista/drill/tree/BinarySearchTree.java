@@ -43,7 +43,7 @@ public class BinarySearchTree<E> extends BinaryTree<E> {
         Node<E> nodeParent = null;// 带插入位置的父节点
         int compare = 0;
         // 获取待插入位置
-        if (node != null) {
+        while (node != null) {
             // 判断元素与结点值大小
             compare = compare(element, node.element);
             nodeParent = node;
@@ -103,7 +103,7 @@ public class BinarySearchTree<E> extends BinaryTree<E> {
             node.element = successor.element;
             node = successor;
         }
-        // 如果结点度为1或0，先理清思路然后再归类整理，最后书写代码（此处的实现逻辑比视频中简单）
+/*        // 如果结点度为1或0，先理清思路然后再归类整理，最后书写代码（此处的实现逻辑比视频中简单）
         Node<E> child = node.left != null ? node.left : node.right; // 隐藏 left==right==null,此时child=null，表明结点度为0
         if (node.parent == null) {
             root = child;
@@ -119,7 +119,32 @@ public class BinarySearchTree<E> extends BinaryTree<E> {
             node.parent.right = child;
         }
         // 删除某个结点后，调整平衡
-        afterRemove(child);
+        afterRemove(child);*/
+        // 删除node节点（node的度必然是1或者0）
+        Node<E> replacement = node.left != null ? node.left : node.right;
+        if (replacement != null) { // 度为1
+            replacement.parent = node.parent; // 修改parent
+            // 更改parent的left、right的指向
+            if (node.parent == null) { // node是度为1的节点并且是根节点
+                root = replacement;
+            } else if (node.isLeftChild()) {
+                node.parent.left = replacement;
+            } else {// node == node.parent.right
+                node.parent.right = replacement;
+            }
+            afterRemove(replacement);
+        } else if (node.parent == null) { // node是叶子节点并且是根节点
+            root = null;
+        } else {// node是叶子节点，但不是根节点
+            if (node.isLeftChild()) {
+                node.parent.left = null;
+            } else {// node == node.parent.right
+                node.parent.right = null;
+            }
+            afterRemove(node);
+        }
+
+
     }
 
     /**
@@ -140,7 +165,7 @@ public class BinarySearchTree<E> extends BinaryTree<E> {
      */
     public Node<E> node(E element) {
         Node<E> node = this.root;
-        int compare = 0;
+        int compare;
         while (node != null) {
             compare = compare(element, node.element);
             if (compare > 0) {

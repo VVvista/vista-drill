@@ -104,6 +104,127 @@ public class RBTree<E> extends BBSTree<E> {
 
     }
 
+    /**
+     * 删除结点之后调整平衡
+     * 1.如果删除的是red结点，直接删除
+     * 2.如果删除的是black且替换的为red的结点，则将red结点染黑（此时仅有red为black的唯一子节点一种情况）
+     * 3.如果删除的是black叶子结点，则进行下溢平衡操作
+     * 3.1如果sibling为black，且有子节点，则进行旋转操作，旋转之后的中心节点继承parent的颜色，旋转后的左右结点变为black
+     * 3.2如果sibling为black，没有子节点，则parent下移与sibling合并成一个结点，此时可能导致parent原所在位置下溢，则再进行下溢平衡操作
+     * 3.3如果sibling为red，先将sibling进行旋转，sibling染为black，parent染为red，再进行3.1或3.2的操作
+     *
+     * @param node
+     */
+    @Override
+    public void afterRemove(Node<E> node) {
+ /*       // 删除结点为red，直接返回;
+        if (isRED(node))  return;
+        //删除结点为black，替换结点为red
+        if (isBlack(node)) {
+            if (node.left != null) {
+                black(node.left);
+            } else {
+                black(node.right);
+            }
+            return;
+        }
+*/
+
+        // 删除结点为red，直接返回;
+        // 删除结点为black，替换结点为red->此种情况下参数 node = 替换red结点
+        // 此处进行了代码优化
+        if (isRED(node)) {
+            black(node);
+            return;
+        }
+
+        // 删除节点为black且没有任何子节点，进行下溢调整操作
+        // 兄弟结点
+        Node<E> parent = node.parent;
+
+        // 删除根结点
+        if (parent == null) return;
+
+        // 删除非根节点
+        // 判断被删除节点是左节点还是右节点
+        boolean left = parent.left == null;
+        Node<E> sibling = left ? parent.right : parent.left;
+
+        if (left) {// 被删除结点为左节点，兄弟结点为右节点
+            // node  sibling
+            if (isRED(sibling)) { // 兄弟节点为红色，此时兄弟节点一定有两个black子节点，否则破坏了红黑树性质4
+                //parent左旋，RR
+                rotateLeft(parent);
+                black(sibling);
+                red(parent);
+                // 重新赋值sibling，此时的sibling必为black，再按照sibling为black进行操作
+                sibling = node.right;
+            }
+            if (isBlack(sibling.left) && isBlack(sibling.right)) {// sibling不存在子节点，此时叶子结点必然为黑色
+                // 兄弟节点没有子节点
+                Boolean black = isBlack(parent);
+                //parent与sibling合并
+                black(parent);
+                red(sibling);
+                // 如果父节点为black，则可能造成下溢，所以需要再次循环判断
+                if (black) {
+                    afterRemove(parent);
+                }
+                // 如果父节点为red，则合并操作一定不会造成下溢
+            } else {// 兄弟节点至少有一个结点，向兄弟节点借节点
+                if (isRED(sibling.left)) {
+                    rotateRight(sibling);
+                    sibling = parent.right;
+                }
+                color(sibling, colorOf(parent));
+                rotateLeft(parent);
+                black(parent);
+                black(sibling.right);
+            }
+        } else {// 被删除结点为右节点，兄弟结点为左节点
+            // sibling  node
+            if (isRED(sibling)) { // 兄弟节点为红色，此时兄弟节点一定有两个black子节点，否则破坏了红黑树性质4
+                //parent右旋，LL
+                rotateRight(parent);
+                black(sibling);
+                red(parent);
+                // 重新赋值sibling，此时的sibling必为black，再按照sibling为black进行操作
+                sibling = node.left;
+            }
+            //兄弟结点为black
+            if (isBlack(sibling.left) && isBlack(sibling.right)) {// sibling不存在子节点，此时叶子结点必然为黑色
+                // 兄弟节点没有子节点
+                Boolean black = isBlack(parent);
+                //parent与sibling合并
+                black(parent);
+                red(sibling);
+                // 如果父节点为black，则可能造成下溢，所以需要再次循环判断
+                if (black) {
+                    afterRemove(parent);
+                }
+                // 如果父节点为red，则合并操作一定不会造成下溢
+            } else {// 兄弟节点至少有一个结点，向兄弟节点借节点
+                if (isRED(sibling.left)) {
+                    rotateLeft(sibling);
+                    sibling = parent.left;
+                }
+                color(sibling, colorOf(parent));
+                rotateRight(parent);
+                black(parent);
+                black(sibling.left);
+            }
+        }
+    }
+
+    /**
+     * black节点下溢，且sibling为black时的操作
+     *
+     * @param sibling
+     * @param parent
+     */
+    private void blackSiblingRemoveAfter(Node<E> sibling, RBNode<E> parent) {
+
+    }
 
     /**
      * 节点染色

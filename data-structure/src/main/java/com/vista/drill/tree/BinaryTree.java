@@ -134,10 +134,10 @@ public class BinaryTree<E> {
             Node<E> right = poll.right;
             // 如果结点不为null，入队列
             if (left != null) {
-                queue.offer(poll.left);
+                queue.offer(left);
             }
             if (right != null) {
-                queue.offer(poll.right);
+                queue.offer(right);
             }
         }
     }
