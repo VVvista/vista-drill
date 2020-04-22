@@ -217,16 +217,6 @@ public class RBTree<E> extends BBSTree<E> {
     }
 
     /**
-     * black节点下溢，且sibling为black时的操作
-     *
-     * @param sibling
-     * @param parent
-     */
-    private void blackSiblingRemoveAfter(Node<E> sibling, RBNode<E> parent) {
-
-    }
-
-    /**
      * 节点染色
      *
      * @param node

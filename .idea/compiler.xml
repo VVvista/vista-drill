@@ -13,7 +13,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="data-structure" target="1.6" />
+      <module name="data-structure" target="8" />
       <module name="design-pattern" target="1.8" />
       <module name="java-base" target="1.6" />
       <module name="vista-drill" target="1.8" />

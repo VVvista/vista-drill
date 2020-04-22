@@ -122,24 +122,25 @@ public class BinarySearchTree<E> extends BinaryTree<E> {
         afterRemove(child);*/
         // 删除node节点（node的度必然是1或者0）
         Node<E> replacement = node.left != null ? node.left : node.right;
+        Node<E> parent = node.parent;
         if (replacement != null) { // 度为1
-            replacement.parent = node.parent; // 修改parent
+            replacement.parent =parent; // 修改parent
             // 更改parent的left、right的指向
-            if (node.parent == null) { // node是度为1的节点并且是根节点
+            if (parent == null) { // node是度为1的节点并且是根节点
                 root = replacement;
             } else if (node.isLeftChild()) {
-                node.parent.left = replacement;
+                parent.left = replacement;
             } else {// node == node.parent.right
-                node.parent.right = replacement;
+                parent.right = replacement;
             }
             afterRemove(replacement);
-        } else if (node.parent == null) { // node是叶子节点并且是根节点
+        } else if (parent == null) { // node是叶子节点并且是根节点
             root = null;
         } else {// node是叶子节点，但不是根节点
             if (node.isLeftChild()) {
-                node.parent.left = null;
+                parent.left = null;
             } else {// node == node.parent.right
-                node.parent.right = null;
+                parent.right = null;
             }
             afterRemove(node);
         }
