@@ -3,6 +3,9 @@ package com.vista.drill.heap;
 import java.util.Comparator;
 
 /**
+ * 抽象二叉堆
+ * 提取公共实现方法
+ *
  * @author Wen TingTing by 2020/4/25
  */
 public abstract class AbstractHeap<E> implements Heap<E> {
