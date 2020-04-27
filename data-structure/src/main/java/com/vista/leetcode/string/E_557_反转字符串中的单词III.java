@@ -1,7 +1,7 @@
 package com.vista.leetcode.string;
 
 
-import com.vista.drill.stack.Stack;
+import com.vista.drill.base.stack.Stack;
 
 /**
  * https://leetcode-cn.com/problems/reverse-words-in-a-string-iii/
