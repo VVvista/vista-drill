@@ -1,4 +1,4 @@
-package com.vista.java.thinginjava.c5;
+package com.vista.java.thinkinjava.c5.exercises;
 
 /**
  * Add an overloaded constructor to the previous exercise that takes a String argument and prints it along with your message

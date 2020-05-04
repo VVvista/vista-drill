@@ -1,4 +1,4 @@
-package com.vista.java.thinginjava.c5;
+package com.vista.java.thinkinjava.c5.exercises;
 
 /**
  * Create a class with a default constructor (one that takes no arguments) that
