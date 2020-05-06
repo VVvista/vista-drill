@@ -10,7 +10,8 @@ this表示当前对象，this.xx可以表示调用对象属性、方法、构造
 
 
 5.4.2 static的含义
-
+static 静态方法
+static方法可以直接使用 类.method()调用，方法内不能使用this ，但非静态方法中可以引用static方法
 
 
 
