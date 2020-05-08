@@ -15,7 +15,7 @@ public class C5_2_1_overloaded {
         f("first", 11);// String:first,int:11
         f(99, "last");// int:99,String:last
         f(99, "second", "last");// int:99,String:second,String:last
-
+new Rock();
     }
 
     /**

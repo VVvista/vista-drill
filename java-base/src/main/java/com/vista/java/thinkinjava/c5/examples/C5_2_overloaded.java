@@ -23,12 +23,12 @@ class Tree {
     /**
      * 构造函数的重载
      */
-    public Tree() {
+     Tree() {
         System.out.println("planting a seedling!!");
         height = 0;
     }
 
-    public Tree(int height) {
+    Tree(int height) {
         this.height = height;
         System.out.println("creating new tree that is " + height + " feet tall");
     }

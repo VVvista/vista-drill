@@ -22,5 +22,6 @@ public class C5_1_Constructor {
 class Rock {
     Rock() {
         System.out.print("Rock!");
+        new Tree();
     }
 }

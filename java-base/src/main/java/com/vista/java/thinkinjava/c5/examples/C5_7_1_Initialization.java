@@ -37,7 +37,7 @@ class Window {
     }
 }
 
-class House {
+ class House {
     Window w1 = new Window(1);
 
     House() {
