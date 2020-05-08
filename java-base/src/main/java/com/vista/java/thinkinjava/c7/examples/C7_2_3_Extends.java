@@ -1,4 +1,4 @@
-package com.vista.java.thinkinjava.c7;
+package com.vista.java.thinkinjava.c7.examples;
 
 /**
  * 带参数的构造器

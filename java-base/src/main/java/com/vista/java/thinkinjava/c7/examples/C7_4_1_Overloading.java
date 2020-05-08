@@ -1,4 +1,4 @@
-package com.vista.java.thinkinjava.c7;
+package com.vista.java.thinkinjava.c7.examples;
 
 /**
  * 继承-方法重载

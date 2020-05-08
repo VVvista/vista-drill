@@ -1,4 +1,4 @@
-package com.vista.java.thinkinjava.c7;
+package com.vista.java.thinkinjava.c7.examples;
 
 /**
  * 7.2 继承语法

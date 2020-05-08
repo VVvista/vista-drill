@@ -1,4 +1,4 @@
-package com.vista.java.thinkinjava.c7;
+package com.vista.java.thinkinjava.c7.examples;
 
 /**
  * 7.7 向上转型
