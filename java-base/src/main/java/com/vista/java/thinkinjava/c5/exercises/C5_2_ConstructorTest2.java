@@ -14,7 +14,6 @@ public class C5_2_ConstructorTest2 {
         System.out.println(tester2.s2);// abc
         System.out.println(tester2.s3);// jack
         C5_1_ConstructorTest test = new C5_1_ConstructorTest();
-        int cons = test.cons;
     }
 }
 
