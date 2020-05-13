@@ -3,7 +3,7 @@ package com.vista.drill.base.list.linkedlist;
 import com.vista.drill.base.list.AbstractList;
 
 /**
- * 自定义实现单链表方法
+ * 单链表方法
  * https://juejin.im/post/5df98c92e51d455836159eef
  * <p>
  * 允许添加null元素

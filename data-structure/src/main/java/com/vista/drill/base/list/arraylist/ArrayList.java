@@ -70,9 +70,6 @@ public class ArrayList<E> extends AbstractList<E> {
         elements = newElement;
     }
 
-
-
-
     @Override
     public E get(int index) {
         // 判断下标是否越界

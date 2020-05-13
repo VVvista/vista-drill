@@ -2,7 +2,7 @@ package com.vista.drill.base.list.linkedlist;
 
 
 /**
- * 自定义双向循环链表
+ * 双向循环链表
  * https://juejin.im/post/5dfad5936fb9a0160b6381df#heading-3
  * <p>
  * 双向循环链表是在双链表的基础上 first.pre=last;last.next=pre

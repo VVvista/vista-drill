@@ -1,7 +1,7 @@
 package com.vista.drill.base.list.linkedlist;
 
 /**
- * 自定义实现单向循环链表
+ * 单向循环链表
  * https://juejin.im/post/5dfad5936fb9a0160b6381df
  * <p>
  * 单向循环链表是在单链表的基础上，尾结点指向头结点

@@ -4,7 +4,7 @@ import com.vista.drill.base.list.AbstractList;
 import com.vista.drill.base.list.List;
 
 /**
- * 自定义实现双向链表方法
+ * 双向链表方法
  * https://juejin.im/post/5df9c8256fb9a016214cd3de
  * <p>
  * 注意点：
