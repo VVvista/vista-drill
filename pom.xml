@@ -28,6 +28,7 @@
         <module>data-structure</module>
         <module>java-base</module>
         <module>design-pattern</module>
+        <module>big-data-spark</module>
     </modules>
     <dependencies>
         <dependency>
