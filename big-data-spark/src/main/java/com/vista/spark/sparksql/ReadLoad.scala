@@ -19,16 +19,28 @@ object ReadLoad {
         df.write.mode(SaveMode.Append).save("D://idea//workspace//vista-drill//big-data-spark//test-file//result.parquet")
      */
 
-/*
-    // 示例2：
-    val df = sqlContext.read.format("json").load("D://idea//workspace//vista-drill//big-data-spark//test-file//students.json")
-    df.show()
-    df.select("name").write.save("D://idea//workspace//vista-drill//big-data-spark//test-file//result.txt")
-*/
+    /*
+        // 示例2：
+        val df = sqlContext.read.format("json").load("D://idea//workspace//vista-drill//big-data-spark//test-file//students.json")
+        df.show()
+        df.select("name").write.save("D://idea//workspace//vista-drill//big-data-spark//test-file//result.txt")
+    */
 
-    // 示例3：
-    val df = sqlContext.read.format("json").load("D://idea//workspace//vista-drill//big-data-spark//test-file//students.json")
+    /*    // 示例3：
+        val df = sqlContext.read.format("json").load("D://idea//workspace//vista-drill//big-data-spark//test-file//students.json")
+        df.show()
+        df.select("name").write.format("json").mode("overwrite").save("D://idea//workspace//vista-drill//big-data-spark//test-file//result.txt")
+      */
+
+    /*    // 示例4：
+        val df = sqlContext.read.json("D://idea//workspace//vista-drill//big-data-spark//test-file//students.json")
+        df.show()
+        df.write.json("D://idea//workspace//vista-drill//big-data-spark//test-file//result.json")
+        */
+
+    // 示例5：
+    val df = sqlContext.jsonFile("D://idea//workspace//vista-drill//big-data-spark//test-file//students.json")
     df.show()
-    df.select("name").write.format("json").mode("overwrite").save("D://idea//workspace//vista-drill//big-data-spark//test-file//result.txt")
+
   }
 }
