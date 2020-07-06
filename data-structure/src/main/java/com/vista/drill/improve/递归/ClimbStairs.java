@@ -1,4 +1,4 @@
-package com.vista.drill.improve.recursion;
+package com.vista.drill.improve.递归;
 
 /**
  * 3.上台阶(跳台阶)

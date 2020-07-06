@@ -28,6 +28,8 @@ object TransformBlacklist {
 
     })
 
+    userAdsClickLogDStream.checkpoint(Seconds(10))
+
     validAdsClickLogRDD.print()
 
     streamingContext.start()

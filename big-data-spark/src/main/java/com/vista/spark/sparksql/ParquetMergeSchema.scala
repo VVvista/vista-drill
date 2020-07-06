@@ -12,14 +12,12 @@ object ParquetMergeSchema {
     val sc = new SparkContext(conf)
     val sqlContext = new SQLContext(sc)
 
-
     import sqlContext.implicits._
     val squaresDF = sc.makeRDD(1 to 5).map(i => (i, i * i)).toDF("value", "square")
     squaresDF.write.mode("overwrite").parquet("hdfs://skuldcdhtest1.ktcs:8020//user/hive/warehouse/wen_test/users/schema/key=1")
 
     val cubesDF = sc.makeRDD(6 to 10).map(i => (i, i * i * i)).toDF("value", "cube")
     cubesDF.write.mode("overwrite").parquet("hdfs://skuldcdhtest1.ktcs:8020//user/hive/warehouse/wen_test/users/schema/key=2")
-
 
     val cubesDF2 = sc.makeRDD(6 to 10).map(i => (i, i * i * i)).toDF("value", "cube")
     cubesDF2.write.mode("append").parquet("hdfs://skuldcdhtest1.ktcs:8020//user/hive/warehouse/wen_test/users/schema/key=1")
