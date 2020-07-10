@@ -1,4 +1,4 @@
-package com.vista.drill.improve.backtracking;
+package com.vista.drill.improve.回溯;
 
 /**
  * 八皇后问题：优化

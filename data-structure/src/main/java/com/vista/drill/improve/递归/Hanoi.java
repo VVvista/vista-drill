@@ -1,4 +1,4 @@
-package com.vista.drill.improve.recursion;
+package com.vista.drill.improve.递归;
 
 /**
  * 4.汉诺塔
