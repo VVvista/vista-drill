@@ -1,6 +1,6 @@
 package com.vista.spark.sparksql
 
-import org.apache.spark.sql.{DataFrame, SQLContext}
+import org.apache.spark.sql.{DataFrame, SQLContext, SparkSession}
 import org.apache.spark.{SparkConf, SparkContext}
 
 /**
@@ -12,6 +12,8 @@ object DataFrameConstruct {
 
     val conf = new SparkConf().setAppName("DataFrameConstruct").setMaster("local")
     val sc = new SparkContext(conf)
+    val session = new SparkSession(sc)
+
     val sqlContext = new SQLContext(sc)
     //  val df: DataFrame = sqlContext.read.json("file:///extend_data/wen/buffer_load/students.json")
     //  val df: DataFrame = sqlContext.read.json("D://idea//workspace//vista-drill//big-data-saprk//test-file//students.json")
