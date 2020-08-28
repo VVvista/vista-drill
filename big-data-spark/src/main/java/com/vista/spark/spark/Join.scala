@@ -13,6 +13,5 @@ object Join {
     val rdd1 = sc.parallelize(Array(("aa", 1), ("bb", 2), ("cc", 6)))
     val rdd2 = sc.parallelize(Array(("aa", 3), ("dd", 4), ("aa", 5)))
     rdd1.join(rdd2).collect()
-
   }
 }

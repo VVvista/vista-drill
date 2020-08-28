@@ -76,6 +76,14 @@
             <artifactId>esdk-obs-java</artifactId>
             <version>3.19.5</version>
         </dependency>
+        <dependency>
+            <groupId>org.elasticsearch</groupId>
+            <artifactId>elasticsearch-spark-20_2.11</artifactId>
+            <version>7.1.0</version>
+        </dependency>
+
+
+
     </dependencies>
 
     <build>

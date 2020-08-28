@@ -1,9 +1,7 @@
 package com.vista.spark.sparksql
 
-import org.apache.spark.{SparkConf, SparkContext}
 import org.apache.spark.sql.{SQLContext, SparkSession}
-
-import scala.collection.immutable.HashMap
+import org.apache.spark.{SparkConf, SparkContext}
 
 /**
   * @author WenTingTing by 2020/6/8
@@ -43,10 +41,10 @@ object HiveDataSource {
 
   // ----------------
 
+/*
     val df = spark.sql("select * from game_ods.event where app='h5_12mlcs' and dt='2020-07-12' and event='event_role.item_3_l'")
     val df = spark.sql("select dt,channel,server,data_unix,uid,rid,p['u_account_id_s'],p['r_role_name_s'],p['t_t1_s'],p['t_t2_s'],p['t_t3_s'],p['t_t4_l'] from game_ods.event where app='h5_12mlcs' and dt='2020-07-12' and event='event_role.item_3_l'")
-
-new HashMap[]
+*/
 
   }
 }

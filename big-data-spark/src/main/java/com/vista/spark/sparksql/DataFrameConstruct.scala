@@ -12,7 +12,6 @@ object DataFrameConstruct {
 
     val conf = new SparkConf().setAppName("DataFrameConstruct").setMaster("local")
     val sc = new SparkContext(conf)
-    val session = new SparkSession(sc)
 
     val sqlContext = new SQLContext(sc)
     //  val df: DataFrame = sqlContext.read.json("file:///extend_data/wen/buffer_load/students.json")
