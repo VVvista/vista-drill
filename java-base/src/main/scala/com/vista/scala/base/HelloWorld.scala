@@ -3,14 +3,13 @@ package com.vista.scala.base
 /**
   * @author WenTingTing by 2020/8/25
   */
-object HelloWorld1 {
+object HelloWorld {
   def main(args: Array[String]): Unit = {
     val helloWorld = new HelloWorld
     println(helloWorld.getName)
     println(helloWorld.sayHello)
     println(helloWorld.sayHello)
-val array=Array(1,2,3,4,5)
-    array.map()
+    val array = Array(1, 2, 3, 4, 5)
 
   }
 }
