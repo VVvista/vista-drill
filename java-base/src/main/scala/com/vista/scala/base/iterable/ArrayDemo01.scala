@@ -1,4 +1,4 @@
-package com.vista.scala.base.table
+package com.vista.scala.base.iterable
 
 /**
   * @author WenTingTing by 2020/9/3

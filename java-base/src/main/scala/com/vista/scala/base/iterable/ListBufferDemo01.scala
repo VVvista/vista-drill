@@ -1,4 +1,4 @@
-package com.vista.scala.base.table
+package com.vista.scala.base.iterable
 
 import scala.collection.mutable.ListBuffer
 
