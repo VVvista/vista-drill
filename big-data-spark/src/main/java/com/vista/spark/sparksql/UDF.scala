@@ -1,6 +1,7 @@
 package com.vista.spark.sparksql
 
 import org.apache.spark.sql.SQLContext
+import org.apache.spark.sql.catalyst.expressions.SpecificInternalRow
 import org.apache.spark.{SparkConf, SparkContext}
 
 /**
@@ -20,7 +21,7 @@ object UDF {
     df.registerTempTable("name")
     sqlContext.udf.register("strlen", (f: String) => f.length)
     sqlContext.sql("select name ,strlen(name) from name").show()
-
+    new SpecificInternalRow()
 
 
   }

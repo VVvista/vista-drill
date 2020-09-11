@@ -19,7 +19,7 @@ object RDDToDataFrame1 {
       val strings = f.split(" ")
       new Student(Integer.valueOf(strings(0)), strings(1), Integer.valueOf(strings(2)))
     })
-
+    val d: RDD[Student] = studentRDD
     for (elem <- studentRDD.collect()) {
       println(elem)
     }

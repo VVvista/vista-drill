@@ -27,9 +27,9 @@ object StructuredBaseOperation {
     df.select("device").where("signal >10")
     ds.filter(_.signal > 10).map(_.device)
 
-    df.groupBy("device_type").agg( avg("signal"))
+/*    df.groupBy("device_type").agg( avg("signal"))
 
-    ds.groupByKey(_.device_type).agg(avg(_.signal))
+    ds.groupByKey(_.device_type).agg(avg(_.signal))*/
 
   }
 }
