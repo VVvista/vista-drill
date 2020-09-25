@@ -1,4 +1,4 @@
-package com.vista.drill.improve.分治;
+package com.vista.drill.improve.e分治;
 
 /**
  * 最大连续子序列和

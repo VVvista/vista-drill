@@ -1,4 +1,4 @@
-package com.vista.drill.improve.回溯;
+package com.vista.drill.improve.c回溯;
 
 /**
  * 八皇后问题1

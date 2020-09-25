@@ -1,4 +1,4 @@
-package com.vista.drill.improve.递归;
+package com.vista.drill.improve.b递归;
 
 /**
  * 1.求1+2+3+...+n的和(n>0)

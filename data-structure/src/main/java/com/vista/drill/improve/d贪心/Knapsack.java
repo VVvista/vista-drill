@@ -1,4 +1,4 @@
-package com.vista.drill.improve.贪心;
+package com.vista.drill.improve.d贪心;
 
 import java.util.Arrays;
 import java.util.Comparator;

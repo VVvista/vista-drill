@@ -1,4 +1,4 @@
-package com.vista.drill.improve.递归;
+package com.vista.drill.improve.b递归;
 
 /**递归
  * 函数中直接或间接的调用自身

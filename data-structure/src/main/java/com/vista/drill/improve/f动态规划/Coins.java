@@ -1,4 +1,4 @@
-package com.vista.drill.improve.动态规划;
+package com.vista.drill.improve.f动态规划;
 
 /**
  * 练习1：找零钱问题

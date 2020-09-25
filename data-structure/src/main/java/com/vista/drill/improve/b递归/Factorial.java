@@ -1,4 +1,4 @@
-package com.vista.drill.improve.递归;
+package com.vista.drill.improve.b递归;
 
 /**
  * 5.阶乘
