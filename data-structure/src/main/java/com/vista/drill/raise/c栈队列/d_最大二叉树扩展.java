@@ -1,7 +1,5 @@
 package com.vista.drill.raise.c栈队列;
 
-import lombok.val;
-
 import java.util.Stack;
 
 /**
