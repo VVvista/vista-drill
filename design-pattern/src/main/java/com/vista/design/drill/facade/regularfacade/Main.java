@@ -14,9 +14,9 @@ package com.vista.design.drill.facade.regularfacade;
  * @author WenTingTing by 2020/4/14
  */
 public class Main {
-    public static void main(String[] args) {
+/*    public static void main(String[] args) {
         Facade facade = new Facade();
         facade.test();
         facade.test1();
-    }
+    }*/
 }
