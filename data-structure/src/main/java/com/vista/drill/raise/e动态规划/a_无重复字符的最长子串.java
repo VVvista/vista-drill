@@ -1,4 +1,4 @@
-package com.vista.drill.raise.d串;
+package com.vista.drill.raise.e动态规划;
 
 /**
  * 给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度
@@ -7,7 +7,7 @@ package com.vista.drill.raise.d串;
  *
  * @author Wen TingTing by 2020/11/15
  */
-public class e_无重复字符的最长子串 {
+public class a_无重复字符的最长子串 {
     /**
      * 方法1： 动态规划
      * 1.设置个指针： i、values[]

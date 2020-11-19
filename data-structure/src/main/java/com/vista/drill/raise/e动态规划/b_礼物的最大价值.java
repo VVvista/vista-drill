@@ -1,4 +1,4 @@
-package com.vista.drill.raise.d串;
+package com.vista.drill.raise.e动态规划;
 
 /**礼物的最大价值
  * 动态规划
@@ -6,7 +6,7 @@ package com.vista.drill.raise.d串;
  * https://leetcode-cn.com/problems/li-wu-de-zui-da-jie-zhi-lcof/
  * @author Wen TingTing by 2020/11/15
  */
-public class f_礼物的最大价值 {
+public class b_礼物的最大价值 {
     public int maxValue(int[][] grid) {
         int row=grid.length;
         int col=grid[0].length;
