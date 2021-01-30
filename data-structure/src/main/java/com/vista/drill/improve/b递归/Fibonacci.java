@@ -92,7 +92,7 @@ public class Fibonacci {
         int[] array = new int[n + 1];// 创建数组存放每项数值，数组下标与n对应，0位置不用
         array[2] = array[1] = 1;
         for (int i = 3; i <= n; i++) {
-            array[n] = array[n - 1] + array[n - 2];
+            array[i] = array[i - 1] + array[i - 2];
         }
         return array[n];
     }
