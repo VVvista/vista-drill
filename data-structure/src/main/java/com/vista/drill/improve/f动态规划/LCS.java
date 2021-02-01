@@ -8,7 +8,7 @@ package com.vista.drill.improve.f动态规划;
  * 状态转移方程：
  * 若 nums1[i-1]=nums2[j-1],dp(i,j)=dp(i-1,j-1)+1
  * 若 nums1[i-1]!=nums2[j-1],dp(i,j)=max{dp(i,j-1),dp(i-1,j)}
- *
+ *https://leetcode-cn.com/problems/longest-common-subsequence/
  * @author WenTingTing by 2020/9/22
  */
 public class LCS {
