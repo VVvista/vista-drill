@@ -10,7 +10,7 @@ package com.vista.drill.improve.f动态规划;
  * 假设：values：价值数组 ； weights：重量数组
  * 编号为k的物品，价值是values[k],重量是weights[k]
  * 状态：dp(i,j)承重刚好为j、有前i件物品可选时的最大总价值。
- * 初始值：dp(i,0)=dp(0,j)=math.Min_value
+ * 初始值：dp(i,0)=0,dp(0,j)=math.Min_value
  * 状态转移方程：
  * 若j<weights[i-1],则dp(i,j)=dp(i-1,j)
  * 若j>=weights[i-1],则dp(i,j)=max{ dp(i-1,j),dp(i-1,j-weights[i-1])+values[i-1])}

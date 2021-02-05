@@ -9,7 +9,7 @@ package com.vista.drill.improve.f动态规划;
  * 循环j [0,i)，
  * 若 nums[j]<nums[i],dp=dp[j]+1， 最大的dp 即为dp(i)
  * 若 nums[j]>=nums[i] ,dp[i]=1 即初始值
- *
+ *https://leetcode-cn.com/problems/longest-increasing-subsequence/
  * @author WenTingTing by 2020/9/22
  */
 public class LIS {

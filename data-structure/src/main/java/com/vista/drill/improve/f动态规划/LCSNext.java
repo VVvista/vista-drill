@@ -9,7 +9,7 @@ package com.vista.drill.improve.f动态规划;
  * 状态转移方程：
  * 若 str1[i-1]=str2[j-1],dp(i,j)=dp(i-1,j-1)+1
  * 若 str1[i-1]!=str2[j-1],dp(i,j)=0
- *
+ *https://leetcode-cn.com/problems/maximum-length-of-repeated-subarray/
  * @author WenTingTing by 2020/9/22
  */
 public class LCSNext {

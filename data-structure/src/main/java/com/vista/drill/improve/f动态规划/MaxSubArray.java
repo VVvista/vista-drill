@@ -8,7 +8,7 @@ package com.vista.drill.improve.f动态规划;
  * 状态转移方程：
  * 若dp(i-1)>0,dp(i)=dp(i-1)+nums(i)
  * 若dp(i-1)<=0,dp(i)=nums(i)
- *
+ *https://leetcode-cn.com/problems/maximum-subarray/
  * @author WenTingTing by 2020/9/22
  */
 public class MaxSubArray {
