@@ -1,4 +1,5 @@
-package com.vista.drill.xiaochao.动态规划.i;
+package com.vista.drill.xiaochao.二叉搜索树;
+
 
 /**
  * https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/
