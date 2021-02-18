@@ -38,9 +38,10 @@ public class i_会议室2 {
         for (int i = 0; i < intervals.length; i++) {
             // 获取堆顶元素
             int peek = minHeap.peek();
-            // 重开会议室
-            if (intervals[i][0] < peek) {
+            if (intervals[i][0] > peek) {
                 minHeap.remove();
+            } else {
+                // 重开会议室
                 room++;
             }
             minHeap.add(intervals[i][1]);
